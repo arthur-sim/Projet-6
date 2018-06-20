@@ -1,3 +1,66 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+#Post
+post_home:
+    path: /
+    controller: App\Controller\DefaultController::index 
+    
+post_new:
+    path: /new
+    controller: App\Controller\DefaultController::index 
+    
+post_show:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+post_edit:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+post_delete:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+#Comment
+comment_home:
+    path: /
+    controller: App\Controller\DefaultController::index 
+    
+comment_new:
+    path: /new
+    controller: App\Controller\DefaultController::index 
+    
+comment_show:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+comment_edit:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+comment_delete:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+#User
+user_home:
+    path: /
+    controller: App\Controller\DefaultController::index 
+    
+user_new:
+    path: /new
+    controller: App\Controller\DefaultController::index 
+    
+user_show:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+user_edit:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+user_delete:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
