@@ -1,3 +1,67 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index: 
+    path: / 
+    controller: App\Controller\DefaultController::index 
+ 
+#Post 
+post_figure_home: 
+    path: / 
+    controller: App\Controller\DefaultController::index  
+     
+post_figure_new: 
+    path: /new 
+    controller: App\Controller\DefaultController::index  
+     
+post_figure_show: 
+    path: /{id} 
+    controller: App\Controller\DefaultController::index  
+     
+post_figure_edit: 
+    path: /{id}/edit 
+    controller: App\Controller\DefaultController::index  
+     
+post_figure_delete: 
+    path: /{id} 
+    controller: App\Controller\DefaultController::index  
+     
+#Comment 
+comment_post_home: 
+    path: / 
+    controller: App\Controller\DefaultController::index  
+     
+comment_post_new: 
+    path: /new 
+    controller: App\Controller\DefaultController::index  
+     
+comment_post_show: 
+    path: /{id} 
+    controller: App\Controller\DefaultController::index  
+     
+comment_post_edit: 
+    path: /{id}/edit  
+    controller: App\Controller\DefaultController::index  
+     
+comment_post_delete: 
+    path: /{id} 
+    controller: App\Controller\DefaultController::index  
+     
+#User 
+user_post_home: 
+    path: / 
+    controller: App\Controller\DefaultController::index  
+     
+user_post_new: 
+    path: /new 
+    controller: App\Controller\DefaultController::index  
+     
+user_post_show: 
+    path: /{id} 
+    controller: App\Controller\DefaultController::index  
+     
+user_post_edit: 
+    path: /{id}/edit  
+    controller: App\Controller\DefaultController::index  
+     
+user_post_delete: 
+    path: /{id} 
+    controller: App\Controller\DefaultController::index 
+    
