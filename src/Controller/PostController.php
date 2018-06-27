@@ -10,6 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Entity\Comment;
+use App\Form\CommentType;
+use App\Repository\CommentRepository;
+
 /**
  * @Route("/post")
  */
@@ -49,9 +53,9 @@ class PostController extends Controller
     /**
      * @Route("/{id}", name="post_show", methods="GET")
      */
-    public function show(Post $post): Response
+    public function show(Post $post  /*, comment $comment*/ ): Response
     {
-        return $this->render('post/show.html.twig', ['post' => $post]);
+        return $this->render('post/show.html.twig', ['post' => $post]/*, ['comment' => $comment]*/);
     }
 
     /**
