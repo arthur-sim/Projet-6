@@ -4,9 +4,14 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="user")
+ * @UniqueEntity(fields="mail", message="Email déjà pris")
+ * @UniqueEntity(fields="username", message="Username déjà pris")
  */
 class User implements UserInterface, \Serializable
 {
@@ -44,7 +49,7 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
-    public function getUsername(): string
+    public function getUsername(): ?string
     {
         return $this->username;
     }
@@ -81,7 +86,7 @@ class User implements UserInterface, \Serializable
     /**
      * Retourne les rôles de l'user
      */
-    public function getRoles(): array
+   public function getRoles(): array
     {
         $roles = $this->roles;
  
@@ -139,5 +144,5 @@ class User implements UserInterface, \Serializable
     {
         [$this->id, $this->username, $this->password] = unserialize($serialized, ['allowed_classes' => false]);
     }
-    
 }
+
