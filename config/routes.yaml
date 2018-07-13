@@ -1,67 +1,66 @@
-index: 
-    path: / 
-    controller: App\Controller\DefaultController::index 
- 
-#Post 
-post_figure_home: 
-    path: / 
-    controller: App\Controller\DefaultController::index  
-     
-post_figure_new: 
-    path: /new 
-    controller: App\Controller\DefaultController::index  
-     
-post_figure_show: 
-    path: /{id} 
-    controller: App\Controller\DefaultController::index  
-     
-post_figure_edit: 
-    path: /{id}/edit 
-    controller: App\Controller\DefaultController::index  
-     
-post_figure_delete: 
-    path: /{id} 
-    controller: App\Controller\DefaultController::index  
-     
-#Comment 
-comment_post_home: 
-    path: / 
-    controller: App\Controller\DefaultController::index  
-     
-comment_post_new: 
-    path: /new 
-    controller: App\Controller\DefaultController::index  
-     
-comment_post_show: 
-    path: /{id} 
-    controller: App\Controller\DefaultController::index  
-     
-comment_post_edit: 
-    path: /{id}/edit  
-    controller: App\Controller\DefaultController::index  
-     
-comment_post_delete: 
-    path: /{id} 
-    controller: App\Controller\DefaultController::index  
-     
-#User 
-user_post_home: 
-    path: / 
-    controller: App\Controller\DefaultController::index  
-     
-user_post_new: 
-    path: /new 
-    controller: App\Controller\DefaultController::index  
-     
-user_post_show: 
-    path: /{id} 
-    controller: App\Controller\DefaultController::index  
-     
-user_post_edit: 
-    path: /{id}/edit  
-    controller: App\Controller\DefaultController::index  
-     
-user_post_delete: 
-    path: /{id} 
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+#Post
+post_home:
+    path: /
     controller: App\Controller\DefaultController::index 
     
+post_new:
+    path: /new
+    controller: App\Controller\DefaultController::index 
+    
+post_show:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+post_edit:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+post_delete:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+#Comment
+comment_home:
+    path: /
+    controller: App\Controller\DefaultController::index 
+    
+comment_new:
+    path: /new
+    controller: App\Controller\DefaultController::index 
+    
+comment_show:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+comment_edit:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+comment_delete:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+#User
+user_home:
+    path: /
+    controller: App\Controller\DefaultController::index 
+    
+user_new:
+    path: /new
+    controller: App\Controller\DefaultController::index 
+    
+user_show:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+user_edit:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
+    
+user_delete:
+    path: /{id}
+    controller: App\Controller\DefaultController::index 
