@@ -1,34 +1,27 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="../../css/show.css">
+{% endblock %}
 
 {% block title %}Post{% endblock %}
 
 {% block body %}
-    <h1>Post</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ post.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ post.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ post.content }}</td>
-            </tr>
-            <tr>
-                <th>Create_at</th>
-                <td>{{ post.createAt ? post.createAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('post_index') }}">back to list</a>
-
-    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
-
-    {{ include('post/_delete_form.html.twig') }}
+    
+    <div id="header">
+        <div id="titre">
+            {{ post.title }}
+        </div>  
+    </div>
+    
+    <div id="block">
+        <a href="{{ path('post_index') }}">back to list</a>
+        <div>{{ post.createAt ? post.createAt|date('Y-m-d H:i:s') : '' }}</div>    
+        <div>{{ post.content }}</div>
+        
+        <div id="edelete">
+            <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+            {{ include('post/_delete_form.html.twig') }}
+        </div>
+    </div>
+               
 {% endblock %}
