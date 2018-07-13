@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+}
+#header{
+    background-image: url('images/fond-snowboard-petit.jpg');
+    background-size: cover;
+    height: 25vh;
+    color:white;
+}
+#header #titre{
+    margin: 0px;
+    line-height: 25vh;
+    margin-left: 45vh;
+    font-size: 6.5em;
+}
+#block{
+    width: 60%;
+    margin: auto;
+    margin-top: 1.5%;
+}
+#block div{
+    margin-top: 1.5%;
+}
+#edelete{
+    display: flex;
+}
+#edelete a{
+    margin-right: 1.5%; 
+}
