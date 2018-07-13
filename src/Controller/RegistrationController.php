@@ -39,7 +39,7 @@ class RegistrationController extends Controller
             $event = new GenericEvent($user);
             $eventDispatcher->dispatch(Events::USER_REGISTERED, $event);
             
-            return $this->redirectToRoute('security_login');
+            return $this->redirectToRoute('post_index');
         }
  
         return $this->render(
