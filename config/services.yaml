@@ -2,8 +2,11 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
-
+    app.notifications.email_sender: arthursimonian@outlook.fr
 services:
+    App\EventSubscriber\RegistrationNotifySubscriber:
+        # le nom de la variable que l'on utilisera dans le service
+        $sender: '%app.notifications.email_sender%'
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
