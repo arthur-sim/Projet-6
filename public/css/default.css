@@ -13,13 +13,10 @@ body{
     margin-left: 45vh;
     font-size: 6.5em;
 }
-#menu a{
-    margin: 0px;
-    text-align: center;
-    font-size: 2.5em;
-}
 #menu{
-    width: 100%;
+    display: flex;
+    font-size: 2em;
+    justify-content: space-between;
 }
 #gif{
     background-image: url('images/snowboarding.gif');
@@ -45,4 +42,36 @@ body{
     line-height: 88vh;
     margin-left: 45vh;
     font-size: 4.5em;
+}
+#login_container{
+    maring: 0%;
+    background-image: url('images/fond-snowboard.jpg');
+    background-size: cover;
+    height: 100vh;
+    color:white;
+}
+#login{
+    margin: 0px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 8vh;
+}
+#login input{
+    width: 30%;
+}
+#login button{
+    width:20%;
+}
+#register_container{
+    maring: 0%;
+    background-image: url('images/fond-snowboard.jpg');
+    background-size: cover;
+    height: 100vh;
+    color:white;
+}
+#register{
+    margin: 0px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 8vh;
 }

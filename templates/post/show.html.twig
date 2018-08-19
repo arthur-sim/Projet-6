@@ -17,11 +17,30 @@
         <a href="{{ path('post_index') }}">back to list</a>
         <div>{{ post.createAt ? post.createAt|date('Y-m-d H:i:s') : '' }}</div>    
         <div>{{ post.content }}</div>
-        
+        {% if post.image1 %}
+            <img src="../../uploads/image/{{ post.image1 }}"/>
+        {% endif %}
+        {% if post.image2 %}
+            <img src="../../uploads/image/{{ post.image2 }}"/>
+        {% endif %}
+        {% if post.image3 %}
+            <img src="../../uploads/image/{{ post.image3 }}"/>
+        {% endif %}
+        {% if post.image4 %}
+            <img src="../../uploads/image/{{ post.image4 }}"/>
+        {% endif %}
+
         <div id="edelete">
             <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
             {{ include('post/_delete_form.html.twig') }}
         </div>
     </div>
+        
+    <div>
+        
+    <iframe src="https://www.youtube.com/embed/zg1TbAinXUs" allowfullscreen></iframe>   
+    <iframe src="//www.dailymotion.com/embed/video/x6s80qr" allowfullscreen></iframe>
+    
+</div>
                
 {% endblock %}
