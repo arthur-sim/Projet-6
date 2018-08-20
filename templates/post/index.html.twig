@@ -12,6 +12,11 @@
                 <th>Title</th>
                 <th>Content</th>
                 <th>Create_at</th>
+                <th>Image1</th>
+                <th>Image2</th>
+                <th>Image3</th>
+                <th>Image4</th>
+                <th>platform</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -22,6 +27,11 @@
                 <td>{{ post.title }}</td>
                 <td>{{ post.content }}</td>
                 <td>{{ post.createAt ? post.createAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td><img src="../../uploads/image/{{ post.image1 }}"/></td>
+                <td><img src="../../uploads/image/{{ post.image2 }}"/></td>
+                <td><img src="../../uploads/image/{{ post.image3 }}"/></td>
+                <td><img src="../../uploads/image/{{ post.image4 }}"/></td>
+                <td>{{ post.platform }}</td>
                 <td>
                     <a href="{{ path('post_show', {'id': post.id}) }}">show</a>
                     <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
