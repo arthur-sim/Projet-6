@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -33,8 +34,114 @@ class Post
 
     /**
     * @ORM\ManyToOne(targetEntity="User")
+    * @ORM\JoinColumn(nullable = false)
     */
     private $user;
+
+    public function getPlatform(): ?int
+    {
+        return $this->platform;
+    }
+
+    public function setPlatform(int $platform): self
+    {
+        $this->platform = $platform;
+
+        return $this;
+    }
+
+    public function getIdPlatform(): ?string
+    {
+        return $this->id_platform;
+    }
+
+    public function setIdPlatform(string $id_platform): self
+    {
+        $this->id_platform = $id_platform;
+
+        return $this;
+    }
+    
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     *
+     * @Assert\NotBlank(message="Please, upload image as a jpg file.")
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     */
+    private $image1;
+    
+    public function __construct() {
+        $this->create_at = new \Datetime();
+    }
+    
+    public function getImage1()
+    {
+        return $this->image1;
+    }
+
+    public function setImage1($image1)
+    {
+        $this->image1 = $image1;
+
+        return $this;
+    }
+    
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     *
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     */
+    private $image2;
+    
+    public function getImage2()
+    {
+        return $this->image2;
+    }
+
+    public function setImage2($image2)
+    {
+        $this->image2 = $image2;
+
+        return $this;
+    }
+    
+    /**
+     * @ORM\Column(type="string",nullable=true)
+     *
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     */
+    private $image3;
+    
+    public function getImage3()
+    {
+        return $this->image3;
+    }
+
+    public function setImage3($image3)
+    {
+        $this->image3 = $image3;
+
+        return $this;
+    }
+    
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     *
+     * @Assert\File(mimeTypes={ "image/jpeg" })
+     */
+    private $image4;
+    
+    public function getImage4()
+    {
+        return $this->image4;
+    }
+
+    public function setImage4($image4)
+    {
+        $this->image = $image4;
+
+        return $this;
+    }
     
     public function getId()
     {
@@ -73,6 +180,18 @@ class Post
     public function setCreateAt(\DateTimeInterface $create_at): self
     {
         $this->create_at = $create_at;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
