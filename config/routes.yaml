@@ -8,7 +8,7 @@ post_home:
     controller: App\Controller\DefaultController::index 
     
 post_new:
-    path: /new
+    path: /post/new
     controller: App\Controller\DefaultController::index 
     
 post_show:

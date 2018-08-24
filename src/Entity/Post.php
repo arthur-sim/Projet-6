@@ -37,30 +37,6 @@ class Post
     * @ORM\JoinColumn(nullable = false)
     */
     private $user;
-
-    public function getPlatform(): ?int
-    {
-        return $this->platform;
-    }
-
-    public function setPlatform(int $platform): self
-    {
-        $this->platform = $platform;
-
-        return $this;
-    }
-
-    public function getIdPlatform(): ?string
-    {
-        return $this->id_platform;
-    }
-
-    public function setIdPlatform(string $id_platform): self
-    {
-        $this->id_platform = $id_platform;
-
-        return $this;
-    }
     
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -72,6 +48,7 @@ class Post
     
     public function __construct() {
         $this->create_at = new \Datetime();
+        /*$this->user = ;*/
     }
     
     public function getImage1()
