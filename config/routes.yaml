@@ -12,7 +12,7 @@ post_new:
     controller: App\Controller\DefaultController::index 
     
 post_show:
-    path: /{id}
+    path: /post/{id}
     controller: App\Controller\DefaultController::index 
     
 post_edit:

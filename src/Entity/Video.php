@@ -27,7 +27,7 @@ class Video
     private $id_platform;
 
     /**
-    * @ORM\ManyToOne(targetEntity="Post")
+    * @ORM\ManyToOne(targetEntity="Post", inversedBy="videos")
     */
     private $post;
     

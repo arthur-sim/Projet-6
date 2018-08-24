@@ -32,7 +32,7 @@ class Comment
     private $create_at;
 
     /**
-    * @ORM\ManyToOne(targetEntity="Post")
+    * @ORM\ManyToOne(targetEntity="Post", inversedBy="comments")
     */
     private $post;
     

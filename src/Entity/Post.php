@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;    
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -39,6 +40,16 @@ class Post
     private $user;
     
     /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="Post")
+     */
+    protected $comments;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Video", mappedBy="Post")
+     */
+    protected $videos;
+    
+    /**
      * @ORM\Column(type="string", nullable=true)
      *
      * @Assert\NotBlank(message="Please, upload image as a jpg file.")
@@ -63,6 +74,14 @@ class Post
         return $this;
     }
     
+    public function getVideos() {
+        
+    }
+    
+    public function getComments() {
+        
+    }
+
     /**
      * @ORM\Column(type="string", nullable=true)
      *

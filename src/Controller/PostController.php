@@ -114,6 +114,7 @@ class PostController extends Controller
      */
     public function show(Post $post, Comment $comment ): Response
     {
+        $comment = $this->Comment->getComment();
         return $this->render('post/show.html.twig', [
             'post' => $post,
             'comment' => $comment
