@@ -8,7 +8,28 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="container" >
+            <div class="row" >
+                <div class="col-sm-1">
+                    <a href=""><img src=""></a>                        
+                </div>
+                <div class="col-sm-offset-7 col-sm-1">
+                    <a href="">Home</a>
+                </div>
+                <div class="col-sm-1">
+                    <a href="">Tricks</a>
+                </div>
+                <div class="col-sm-1">
+                    <a href="">Sign in</a>
+                </div>
+                <div class="col-sm-1">
+                    <a href="">Sign up</a>
+                </div>
+            </div>
+        </div>
+        {% block body %}
+        
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
